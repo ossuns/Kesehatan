@@ -38,28 +38,40 @@ public class Hitung extends AppCompatActivity {
             //BMI = Berat Badan kg/ (Tinggi Badan m * Tinggi Badan m)
             bmi = beratBadan/(tinggiBadan*tinggiBadan*0.0001);
             Log.d("tag","Nama = "+nama+"\nbmi = "+bmi+"");
-            if (bmi<18.5){
+            if (bmi<15){
                 //Log.d("keterangan Perempuan", "Under Weight/Kurus – Sebaiknya mulai menambah berat badan dan mengkonsumsi makanan berkarbohidrat di imbangi dengan olah raga");
-                hasil="Under Weight/Kurus";
-                ket = "Sebaiknya mulai menambah berat badan dan mengkonsumsi makanan berkarbohidrat di imbangi dengan olah raga" +
+                hasil="Very Severely Underweight/Sangat Kurus Sekali";
+                ket = "Sebaiknya melakukan konsultasi pada dokter" +
+                        "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
+            }
+            else if(bmi>=15&&bmi<16){
+                //Log.d("keterangan Perempuan","Normal Weight/Normal – Bagus, berat badan anda termasuk kategori ideal");
+                hasil="Severely Underweight/Normal";
+                ket = "Mulai melakukan konsultasi dokter dan memulai makan makanan yang banyak mengandung karbohidrat tinggi, kalori dan makanan padat" +
+                        "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
+            }
+            else if(bmi>=16.00&&bmi<18.5){
+                //Log.d("keterangan Perempuan","Normal Weight/Normal – Bagus, berat badan anda termasuk kategori ideal");
+                hasil="Underweight/Normal";
+                ket = "Perbanyak konsumsi makanan yang mengandung karbohidrat tinggi, kalori dan makanan padat" +
                         "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
             }
             else if(bmi>=18.5&&bmi<25){
                 //Log.d("keterangan Perempuan","Normal Weight/Normal – Bagus, berat badan anda termasuk kategori ideal");
-                hasil="Normal Weight/Normal";
-                ket = "Bagus, berat badan anda termasuk kategori ideal" +
+                hasil="Healthy Weight/Normal";
+                ket = "Bagus, berat badan anda termasuk kategori ideal. Menjaga pola makan dan olahraga agar tidak mengalami penurunan dan penambahan berat badan" +
                         "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
             }
             else if (bmi>=25&&bmi<30){
                 //Log.d("keterangan Perempuan","Over Weight/Kegemukan – anda sudah masuk kategori gemuk. sebaiknya hindari makanan berlemak dan mulailah meningkatkan olahraga seminggu minimal 2 kali");
                 hasil = "Over Weight/Kegemukan";
-                ket = "Anda sudah masuk kategori gemuk. sebaiknya hindari makanan berlemak dan mulailah meningkatkan olahraga seminggu minimal 2 kali" +
+                ket = "Anda sudah masuk kategori gemuk. sebaiknya hindari makanan berlemak, yang mengandung karbohidrat dan kalori tinggi. Mulailah meningkatkan olahraga serta menjaga pola makan" +
                         "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
             }
             else{
                 //Log.d("keterangan Perempuan","\tObesitas – Sebaiknya segera membuat program menurunkan berat badan karena anda termasuk kategori obesitas/ terlalu gemuk dan tidak baik bagi kesehatan");
                 hasil="Obesitas";
-                ket = "Sebaiknya segera membuat program menurunkan berat badan karena anda termasuk kategori obesitas/ terlalu gemuk dan tidak baik bagi kesehatan" +
+                ket = "Pada kategori ini lebih baik anda mulai melakukan konsultasi dokter dan ikuti program penurunan berat badan sebisa mungkin" +
                         "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
             }
             Log.d("tag","Nama = "+nama+"\nbmi = "+bmi+"\n"+"hasil : "+hasil+"\nket : "+ket+"\n");
