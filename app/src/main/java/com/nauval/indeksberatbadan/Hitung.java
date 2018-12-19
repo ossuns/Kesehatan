@@ -68,9 +68,21 @@ public class Hitung extends AppCompatActivity {
                 ket = "Anda sudah masuk kategori gemuk. sebaiknya hindari makanan berlemak, yang mengandung karbohidrat dan kalori tinggi. Mulailah meningkatkan olahraga serta menjaga pola makan" +
                         "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
             }
+            else if (bmi>=30&&bmi<35){
+                //Log.d("keterangan Perempuan","Obesitas Kelas I – anda sudah masuk kategori gemuk. sebaiknya hindari makanan berlemak dan mulailah meningkatkan olahraga seminggu minimal 2 kali");
+                hasil = "Obesitas Kelas I";
+                ket = "Anda sudah masuk kategori obesitas kelas I. sebaiknya hindari makanan berlemak, yang mengandung karbohidrat dan kalori tinggi. Mulailah meningkatkan olahraga serta menjaga pola makan" +
+                        "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
+            }
+            else if (bmi>=35&&bmi<40){
+                //Log.d("keterangan Perempuan","Obesitas Kelas II – anda sudah masuk kategori gemuk. sebaiknya hindari makanan berlemak dan mulailah meningkatkan olahraga seminggu minimal 2 kali");
+                hasil = "Obesitas Kelas II";
+                ket = "Anda sudah masuk kategori obesitas kelas II. sebaiknya hindari makanan berlemak, yang mengandung karbohidrat dan kalori tinggi. Mulailah meningkatkan olahraga serta menjaga pola makan" +
+                        "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
+            }
             else{
-                //Log.d("keterangan Perempuan","\tObesitas – Sebaiknya segera membuat program menurunkan berat badan karena anda termasuk kategori obesitas/ terlalu gemuk dan tidak baik bagi kesehatan");
-                hasil="Obesitas";
+                //Log.d("keterangan Perempuan","Obesitas kelas III – Sebaiknya segera membuat program menurunkan berat badan karena anda termasuk kategori obesitas/ terlalu gemuk dan tidak baik bagi kesehatan");
+                hasil="Obesitas Kelas III";
                 ket = "Pada kategori ini lebih baik anda mulai melakukan konsultasi dokter dan ikuti program penurunan berat badan sebisa mungkin" +
                         "Perlu diingat BMI tidak dapat diaplikasikan kepada anak-anak, wanita hamil, orang berbadan berotot, dan orang tua";
             }
